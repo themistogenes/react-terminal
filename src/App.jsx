@@ -16,6 +16,16 @@ function App() {
             if (e.key === "Enter") {
               let newOutput = '';
               newOutput = output + "\n" + "$" + input + "\n";
+              switch (input) {
+                case "ls":
+                  newOutput += "List of projects";
+                  break;
+                case "pwd":
+                  newOutput += "You're on my cool terminal site";
+                  break;
+                default:
+                  newOutput += "Unknown Command"
+              }
               setOutput(newOutput);
               setInput('');
             }
