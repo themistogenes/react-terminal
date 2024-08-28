@@ -11,7 +11,10 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
+    <div 
+      className="App"
+      onClick={e => {inputRef.current.focus()}}
+    >
       <input 
         ref={inputRef}
         type="text" 
