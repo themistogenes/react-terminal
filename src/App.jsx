@@ -1,13 +1,19 @@
 import './App.css'
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 function App() {
   const [input, setInput] = useState('');
   const [output, setOutput] = useState('');
+  const inputRef = useRef();
+
+  useEffect(() => {
+    inputRef.current.focus();
+  }, [])
 
   return (
     <div className="App">
       <input 
+        ref={inputRef}
         type="text" 
         value={input}
         onChange={e => setInput(e.target.value)}
