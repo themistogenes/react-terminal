@@ -24,7 +24,7 @@ function App() {
           e => {
             if (e.key === "Enter") {
               let newOutput = '';
-              newOutput = output + "\n" + "$" + input + "\n";
+              newOutput = output + "\n" + "\n" + "$" + input + "\n";
               switch (input) {
                 case "ls":
                   newOutput += "List of projects";
