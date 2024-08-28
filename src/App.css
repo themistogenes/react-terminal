@@ -15,3 +15,7 @@ input {
   color: white;
   width: 100%;
 }
+
+.terminal {
+  white-space: pre-line;
+}
