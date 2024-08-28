@@ -11,6 +11,16 @@ function App() {
         type="text" 
         value={input}
         onChange={e => setInput(e.target.value)}
+        onKeyDown={
+          e => {
+            if (e.key === "Enter") {
+              let newOutput = '';
+              newOutput = output + "\n" + "$" + input + "\n";
+              setOutput(newOutput);
+              setInput('');
+            }
+          }
+        }
       />
       <div className="terminal">
         {output}
